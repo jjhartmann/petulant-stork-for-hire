@@ -62,5 +62,8 @@ app.use(function(err, req, res, next) {
   });
 });
 
+// Serve static files
+app.use(express.static('public'));
+
 
 module.exports = app;
