@@ -13,7 +13,7 @@ $(function(){
     var doc = $(document),
         win = $(window),
         canvas = $('#paper'),
-        contex = canvas[0].getContext('2d'),
+        context = canvas[0].getContext('2d'),
         introduction = $('#introductions');
 
     var draw = false;
@@ -24,6 +24,7 @@ $(function(){
         previous.x = e.pageX;
         previous.y = e.pageY;
 
+        draw = true;
         introduction.fadeOut();
     });
 
@@ -41,9 +42,9 @@ $(function(){
 
 
     function drawLine(fromx, fromy, tox, toy) {
-        contex.moveTo(fromx, fromy);
-        contex.lineTo(tox, toy);
-        contex.stroke();
+        context.moveTo(fromx, fromy);
+        context.lineTo(tox, toy);
+        context.stroke();
     }
 
 });
